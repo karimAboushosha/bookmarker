@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: #fec260;
+    color:#352e28;
+}
+
+body{
+    background-color:#f7ecde;
+}
+
+h1{
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    
+    position: relative;
+    display: inline-block;
+}
+
+h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    left: 0;
+    bottom: 25px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+h1:hover::after {
+    height: 35%;
+}
+
+.title-div{
+    border-bottom: dashed 1px black;
+}
+
+
+h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ .bookmark-icons{
+    font-size: 25px;   
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
+.form{
+       border-bottom: dashed 1px black;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 0.25rem #fec26055;
+    border-color: #d99c39;
+}
+
+label{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600px;
+    font-size: 16px;
+}
+
+.button button, table th{
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+.circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.circles span:nth-child(1) {
+    background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+    background-color: #4db748;
+}
+.box-content p{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+
+.rules li {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.rules i{
+    color: #bb4120;
+}
+
+.box-info{
+    background-color: rgba(0, 0, 0, 0.449);
+}
