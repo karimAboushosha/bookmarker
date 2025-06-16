@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css/all.min.css" />
+    <link rel="stylesheet" href="./style.css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css/style.css" />
+  </head>
+  <body>
+    <div class="container my-5 ">
+      <div class="title-div text-center">
+        <h1 class="py-4 mb-3 text-center">Bookmarker</h1>
+      </div>
+      <div class=" my-3 d-flex justify-content-center align-items-center">
+        <i class="bookmark-icons  fa-solid fa-bookmark"></i>
+        <h2 class="mx-3 pt-3">Bookmark your favorite sites</h2>
+        <i class="bookmark-icons fa-solid fa-bookmark"></i>
+      </div>
+      <div class="form mb-5">
+        <div>
+        <i class="fa-solid fa-book-bookmark"></i>
+        <label for="SiteName" class="mb-2 fw-semibold">Site Name</label>
+      </div>
+      <input oninput="productNameValidation()" type="text" placeholder="Bookmark Name" id="SiteName" class="w-100 form-control mb-3" />
+      <p class="alert alert-danger d-none" id="validationError">Product Name Must start with Upper Letter </p>
+      <div>
+        <i class="fa-solid fa-link"></i>
+        <label for="SiteURL" class="mb-2 fw-semibold">Site URL</label>
+      </div>
+      <input type="text" placeholder="Website URL" id="SiteURL" class="w-100 mb-4 form-control "/>
+      <div class="button text-center mb-4">
+        <button onclick="addsite()" class="text-center btn btn-danger px-5">Submit</button>
+      </div>
+      </div>
+      <table class="table text-center bg-light">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>  
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="row">
+        </tbody>
+       
+      </table>
+      <div class="box-info position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+          <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+        <header class="box-header w-100 d-flex justify-content-between align-content-center mb-4">
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button class="btn border-0" id="closeBtn"><i class="fa-solid fa-xmark close fs-3"></i></button>
+        </header>
+        <p class="m-0 pb-2"> Site Name or Url is not valid, Please follow the rules below :</p>
+      <ol class="rules list-unstyled m-0">
+        <li><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters</li>
+        <li><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</li>
+      </ol>
+        </div>
+      </div>
+    </div>
+    <script src="./Java.js/bootstrap.bundle.min.js"></script>
+    <script src="./Java.js/index.js"></script>
+  </body>
+</html>
